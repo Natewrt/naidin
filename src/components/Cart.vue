@@ -1,0 +1,43 @@
+<template>
+  <div class='cart'>
+    <span>Cart:</span>
+    <ul class='cart-items'>
+      <li v-for='item in cartItems'>
+        {{ item.name }} <span class='cart-quantity'>(x{{ item.quantity }})</span> 
+      </li>
+    </ul>
+    <span class='cart-total'>Total: ${{ cartTotal }}</span>
+  </div>
+</template>
+
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  name: 'cart',
+  // mapGetters() takes a list of getter names and proxies them as values directly on the component.
+  computed: mapGetters(['cartItems', 'cartTotal'])
+}
+</script>
+
+<style>
+
+.cart-items {
+  display: inline;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.cart-items li {
+  display: list-item;
+}
+
+.cart-quantity {
+  color: #999;
+}
+
+.cart-total {
+  color: black;
+  font-weight: bold;
+}
+</style>
