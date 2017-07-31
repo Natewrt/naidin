@@ -3,7 +3,7 @@
   <div id='app'>
     <cart />
     <div class='hr'></div>
-    <h1>Naidin</h1>
+    <h1>Naidin New</h1>
     <h2>Book store</h2>
     <items />
   </div>
